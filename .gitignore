@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Logs
+*.log
+debug.log
+server.log
+
+# Lock file
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Runtime
+*.pid

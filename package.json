@@ -1,0 +1,12 @@
+{
+  "name": "kiro-chat-ui",
+  "version": "1.0.0",
+  "description": "Chat UI for kiro-cli",
+  "main": "server.js",
+  "scripts": {
+    "start": "./kiro-chat.sh start",
+    "stop": "./kiro-chat.sh stop",
+    "restart": "./kiro-chat.sh restart",
+    "status": "./kiro-chat.sh status"
+  }
+}
