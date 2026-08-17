@@ -57,15 +57,16 @@ npm run status # Check if running
 ## How It Works
 
 1. The Node.js server spawns `kiro-cli chat` as a child process
-2. WebSocket connection between browser and server streams messages
-3. Server parses kiro-cli's ANSI output into structured responses
-4. Frontend renders markdown, tool calls, and manages sessions
+2. Browser sends messages via HTTP POST to the server API
+3. Server pipes input to kiro-cli's stdin and captures stdout response
+4. Server parses kiro-cli's ANSI output into structured JSON
+5. Frontend renders markdown, tool calls, and manages sessions
 
 ## Architecture
 
 ```
 Browser (index.html)
-    ↕ WebSocket
+    ↕ HTTP POST/GET
 Node.js Server (server.js)
     ↕ stdio
 kiro-cli chat --resume-id <session>
